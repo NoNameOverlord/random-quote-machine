@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -33,10 +31,10 @@ function App() {
     const randomNumber = Math.floor(Math.random() * allQuotes.length);
     console.log(randomNumber)
     console.log(allQuotes[randomNumber])
-    setQuotes(prevState => ({
+    setQuotes({
       quote: allQuotes[randomNumber].quote,
       author: allQuotes[randomNumber].author
-    }))
+    })
   }
 
   return (
